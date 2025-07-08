@@ -54,21 +54,6 @@ export default function Home() {
     <main className="p-6 bg-gray-100 min-h-screen">
       <h1 className="text-3xl font-bold mb-6">🔐 Hash Verification (Blockchain Logs)</h1>
 
-      {/* Filter Dropdown */}
-      <div className="mb-6">
-        <label htmlFor="filter" className="mr-2 font-medium">Filter:</label>
-        <select
-          id="filter"
-          value={filter}
-          onChange={(e) => setFilter(e.target.value)}
-          className="p-2 border rounded"
-        >
-          <option value="all">All</option>
-          <option value="Courtroom Evidence">Courtroom Evidence</option>
-          <option value="Not Evidence">Not Evidence</option>
-        </select>
-      </div>
-
       {/* Check Entry Form */}
       <div className="mb-6 border p-4 rounded bg-white shadow-md">
         <h2 className="text-xl font-semibold mb-4">🔍 Check Stored Hash by Fields</h2>
@@ -125,6 +110,22 @@ export default function Home() {
             </div>
           </div>
         )}
+      </div>
+
+
+      {/* Filter Dropdown */}
+      <div className="mb-6">
+        <label htmlFor="filter" className="mr-2 font-medium">Filter:</label>
+        <select
+          id="filter"
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          className="p-2 border rounded"
+        >
+          <option value="all">All</option>
+          <option value="Courtroom Evidence">Courtroom Evidence</option>
+          <option value="Not Evidence">Not Evidence</option>
+        </select>
       </div>
 
       {/* Logs Table */}
