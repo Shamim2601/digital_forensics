@@ -104,7 +104,10 @@ export default function Home() {
                   <p><span className="text-purple-400">Source:</span> {entry.source}</p>
                   <p><span className="text-purple-400">Comment:</span> {entry.text}</p>
                   <p><span className="text-purple-400">Hash:</span> <span className="break-all">{entry.hashval}</span></p>
-                  <p><span className="text-purple-400">Timestamp:</span> {new Date(entry.timestamp).toLocaleString()}</p>
+                  <p>
+                    <span className="text-purple-400">Timestamp:</span>{' '}
+                    {new Date(new Date(entry.timestamp).getTime() + 6 * 60 * 60 * 1000).toLocaleString()}
+                  </p>
                 </div>
               ))}
             </div>
