@@ -31,7 +31,7 @@ export default function Home() {
     const url = new URL('/api/hashes', window.location.origin);
     url.searchParams.append('user_id', checkUserId);
     url.searchParams.append('source', checkSource);
-    url.searchParams.append('text', checkText);
+    // url.searchParams.append('text', checkText);
 
     try {
       const res = await fetch(url.toString());
@@ -87,13 +87,13 @@ export default function Home() {
             onChange={(e) => setCheckSource(e.target.value)}
             className="p-2 border rounded w-full"
           />
-          <input
+          {/* <input
             type="text"
             placeholder="Comment Text (Exact)"
             value={checkText}
             onChange={(e) => setCheckText(e.target.value)}
             className="p-2 border rounded w-full"
-          />
+          /> */}
         </div>
         <button
           onClick={handleCheckEntry}
